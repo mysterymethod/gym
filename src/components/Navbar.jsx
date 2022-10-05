@@ -8,7 +8,11 @@ function Navbar() {
   return (
     <Stack>
       <Link tp='/'>
-        <img src={Logo} />
+        <img src={Logo} style={{
+          width: '48px',
+          height: '48px',
+          margin: '0 20px'
+        }} />
       </Link>
     </Stack>
   )
