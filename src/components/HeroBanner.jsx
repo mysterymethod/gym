@@ -26,6 +26,8 @@ function HeroBanner() {
       <Typography
         fontWeight={700}
         sx={{fontSize: {lg : '44px', xs: '40px'}}}
+        mb='23px'
+        mt='30px'
       >
         Sweat, Smile <br /> and Repeat
       </Typography>
@@ -33,7 +35,7 @@ function HeroBanner() {
       <Typography 
         fontSize='22px'
         lineHeight='35px'
-        mb={2}
+        mb={4}
       >
         Check out the most effective exercises
       </Typography>
@@ -42,6 +44,10 @@ function HeroBanner() {
         variant='contained'
         color='error'
         href='#exercises'
+        sx= {{
+          backgroundColor : '#ff2625',
+          padding: '10px'
+        }}
       >
         Explore Exercises
       </Button>
@@ -53,7 +59,7 @@ function HeroBanner() {
           opacity: 0.1,
           display: {lg: 'block', xs: 'none'}
         }}
-
+        fontSize='200px'
       >
         Exercise
       </Typography>
