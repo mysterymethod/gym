@@ -31,7 +31,7 @@ function SearchExercise() {
               border: 'none',
               borderRadius: '4px'
             },
-            width: { lg: '1170px', xs: '350px' },
+            width: { lg: '800px', xs: '350px' },
             backgroundColor: '#fff',
             borderRadius: '40px'
           }}
@@ -41,6 +41,24 @@ function SearchExercise() {
           placeholder='Search Exercise'
           type='text'
         />
+
+        <Button 
+          className='search-btn'
+          variant='contained'
+          sx = {{
+            backgroundColor: '#FF2625',
+            color: '#fff',
+            textTransform: 'none',
+            width: {lg : '175px', xs: '80px'}, 
+            fontSize: {lg: '20px', xs: '14px'},
+            height: '56px',
+            position: 'absolute'
+          }}
+        
+        >
+          Search
+        </Button>
+
       </Box>
 
     </Stack>
