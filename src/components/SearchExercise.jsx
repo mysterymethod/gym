@@ -6,11 +6,11 @@ import { exerciseOptions, fetchData } from '../utils/fetchData'
 import HorizontalScrollbar from './HorizontalScrollbar'
 
 
-function SearchExercise() {
+function SearchExercise({setExercises, bodyPart, setBodyPart}) {
 
   const [search, setSearch] = useState('')
 
-  const [exercises, setExercises] = useState([])
+  // const [exercises, setExercises] = useState([])
 
   const [bodyParts, setBodyParts] = useState([])
 
@@ -43,7 +43,7 @@ function SearchExercise() {
 
       setExercises(searchedExercise)
 
-      console.log(exercises);
+      // console.log(exercises);
 
     }
   }
@@ -119,6 +119,8 @@ function SearchExercise() {
 
         <HorizontalScrollbar
           data={bodyParts}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
         />
 
       </Box>
