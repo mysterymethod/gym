@@ -13,7 +13,11 @@ function HorizontalScrollbar({data}) {
             title={item.id || item}
             m='0 40px'
           >
-            {item.id || item}
+            <BodyPart 
+              item={item} 
+              bodyPart={bodyPart}
+              setBodyPart={setBodyPart}
+            />
           </Box>
         ))
       }
