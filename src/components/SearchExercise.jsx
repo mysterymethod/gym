@@ -9,10 +9,26 @@ function SearchExercise() {
 
   const [search, setSearch] = useState('')
 
+  const [exercises, setExercises] = useState([])
+
   const handleSearch = async () => {
     if(search) {
-      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions)
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
       console.log(exercisesData)
+
+      const searchedExercise = exercisesData.filter(
+        (exercise) => exercise.name.toLowerCase().includes(search)
+        || exercise.target.toLowerCase().includes(search)
+        || exercise.equipment.toLowerCase().includes(search)
+        || exercise.bodyPart.toLowerCase().includes(search)
+      )
+
+      setSearch('')
+
+      setExercises(searchedExercise)
+
+      console.log(exercises);
+
     }
   }
 
@@ -66,7 +82,8 @@ function SearchExercise() {
             width: {lg : '175px', xs: '80px'}, 
             fontSize: {lg: '20px', xs: '14px'},
             height: '56px',
-            position: 'absolute'
+            position: 'absolute',
+            right: '0'
           }}
           onClick={handleSearch}
         >
